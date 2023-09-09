@@ -20,6 +20,10 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+textarea {
+  resize: none;
+}
+
 /* Utilities */
 .fw-100 {
   font-weight: 100;
@@ -65,7 +69,7 @@ body::-webkit-scrollbar {
   height: 50vh;
 }
 
-.overflowY-scroll{
+.overflowY-scroll {
   overflow-y: scroll;
 }
 
@@ -75,6 +79,18 @@ body::-webkit-scrollbar {
 
 .overflowY-hidden {
   overflow-y: hidden;
+}
+
+.bg-black{
+  background-color: var(--dark) !important;
+}
+
+.bg-black-transparency {
+  background-color: #13131A80;
+}
+
+.bg-white{
+  background-color: var(--light) !important;
 }
 
 /* custom classes */
@@ -107,7 +123,7 @@ body::-webkit-scrollbar {
     radial-gradient(at 66% 73%, hsla(165, 27%, 8%, 1) 0px, transparent 50%);
 }
 
-.dark-gradient-3 {
+.dark-gradient-3, .g-button:hover {
   transition: 0.5s;
   background-attachment: fixed;
   background-color: hsla(169, 100%, 6%, 1);
@@ -117,6 +133,35 @@ body::-webkit-scrollbar {
     radial-gradient(at 19% 85%, hsla(185, 100%, 50%, 0.06) 0px, transparent 50%),
     radial-gradient(at 48% 42%, hsla(175, 77%, 6%, 1) 0px, transparent 50%),
     radial-gradient(at 55% 100%, hsla(185, 86%, 53%, 0.06) 0px, transparent 50%);
+}
+
+.dark-gradient-4 {
+  background-attachment: fixed;
+  background-color: hsla(196, 0%, 6%, 1);
+  background-image:
+    radial-gradient(at 0% 50%, hsla(173, 100%, 50%, 0.07) 0px, transparent 50%),
+    radial-gradient(at 84% 39%, hsla(165, 100%, 49%, 0.05) 0px, transparent 50%),
+    radial-gradient(at 1% 77%, hsla(169, 100%, 50%, 0.05) 0px, transparent 50%),
+    radial-gradient(at 51% 100%, hsla(173, 100%, 50%, 0.05) 0px, transparent 50%),
+    radial-gradient(at 82% 94%, hsla(173, 96%, 50%, 0.05) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(184, 100%, 50%, 0.06) 0px, transparent 50%),
+    radial-gradient(at 92% 8%, hsla(196, 100%, 47%, 0.05) 0px, transparent 50%),
+    radial-gradient(at 44% 0%, hsla(181, 100%, 50%, 0.09) 0px, transparent 50%);
+}
+
+.gradient-1{
+  background: radial-gradient(50% 123.47% at 50% 50%, #000000 0%, #FFFFFF 100%), radial-gradient(100% 100% at 50% 100%, #E9FFD8 0%, #001356 100%), linear-gradient(238.72deg, #0066FF 0%, #00CD21 100%), radial-gradient(100% 188.01% at 76.14% 0%, #00CAF7 0%, #FF00C7 100%), linear-gradient(0deg, #00C2FF 0%, #FFC700 100%), radial-gradient(59.2% 100% at 50% 0%, #8000FF 0%, #0085FF 100%), radial-gradient(100% 148.07% at 0% 0%, #FC8800 0%, #00FF94 100%);
+    background-blend-mode: overlay, multiply, hard-light, color-dodge, color-burn, color-burn, normal;
+}
+
+.gradient-2 {
+background: linear-gradient(180deg, #0C003C 0%, #BFFFAF 100%), linear-gradient(165deg, #480045 25%, #E9EAAF 100%), linear-gradient(145deg, #480045 25%, #E9EAAF 100%), linear-gradient(300deg, rgba(233, 223, 255, 0) 0%, #AF89FF 100%), linear-gradient(90deg, #45EBA5 0%, #45EBA5 30%, #21ABA5 30%, #21ABA5 60%, #1D566E 60%, #1D566E 70%, #163A5F 70%, #163A5F 100%);
+  background-blend-mode: overlay, overlay, overlay, multiply, normal;
+}
+
+.gradient-3 {
+  background: linear-gradient(127.43deg, #00FFD1 0%, #08003A 100%), linear-gradient(307.27deg, #5200FF 0.37%, #04C600 100%), radial-gradient(100% 147.24% at 0% 31%, #00D1FF 0%, #698400 100%), radial-gradient(100% 140% at 100% 0%, #5ED500 0%, #2200AA 100%);
+    background-blend-mode: difference, difference, difference, normal;
 }
 
 .custom-bg-1 {
@@ -141,13 +186,12 @@ body::-webkit-scrollbar {
 
 /* app */
 .profile {
-  background: rgb(68, 255, 213);
-  background: linear-gradient(45deg, rgba(68, 255, 213, 1) 22%, rgba(15, 180, 164, 1) 63%, rgba(8, 74, 67, 1) 100%);
   border-radius: 100%;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   margin-bottom: 2rem;
-  border: 3px solid var(--aqua-dark);
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--light);
 }
 
 .profile img {
@@ -162,7 +206,8 @@ body::-webkit-scrollbar {
   top: 0;
   width: 100%;
   backdrop-filter: blur(2px);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--dark);
+  z-index: 10;
 }
 
 .navbar--dark:hover {
@@ -205,24 +250,14 @@ body::-webkit-scrollbar {
   animation: slide-top 0.8s ease-out infinite alternate both;
 }
 
-.projects{
-  height: 70vh;
-  overflow-y: scroll;
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.125);
-  backdrop-filter: blur(5px);
-  border-radius: 7px;
-  text-align: center;
-}
-
-.projects::-webkit-scrollbar {
-  display: none;
-}
-
-.project{
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 15px;
+.g-button{
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-weight: 500;
+  /* background-color: var(--light); */
+  color: var(--light);
+  outline: none;
+  border: none;
 }
 
 .stack {
@@ -232,6 +267,21 @@ body::-webkit-scrollbar {
   width: 100%;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+.contact-form {
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.contact-form input, .contact-form textarea {
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+  outline: none;
+  border: none;
+  padding: 10px;
+  color: var(--light);
+  font-weight: 200;
 }
 
 .tools {
@@ -286,6 +336,11 @@ body::-webkit-scrollbar {
   .presentation__h1 {
     font-size: 2.5rem;
   }
+
+  .profile {
+    height: 225px;
+    width: 225px;
+  }
 }
 
 /*Medium (md)*/
@@ -298,10 +353,19 @@ body::-webkit-scrollbar {
     width: 55px;
     height: 55px;
   }
+
+  .profile {
+    height: 225px;
+    width: 225px;
+  }
 }
 
 /*Large (lg)*/
 @media (min-width:992px) {
+
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
 
   .presentation__h1 {
     font-size: 4.5rem;
@@ -314,6 +378,11 @@ body::-webkit-scrollbar {
   .tools {
     width: 75px;
     height: 75px;
+  }
+
+  .profile {
+    height: 300px;
+    width: 300px;
   }
 }
 

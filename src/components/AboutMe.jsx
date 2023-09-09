@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutMe = () => {
     return (
-        <section className="dark-gradient vh-100" id='AboutMe'>
+        <section className="vh-100" id='AboutMe'>
             <div className="container h-100 d-flex justify-content-center align-items-center">
                 <div className="row row-cols-1">
                     <div className="col">
