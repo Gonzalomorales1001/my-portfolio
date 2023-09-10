@@ -1,0 +1,41 @@
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(2px);
+    background-color: var(--dark);
+    z-index: 10;
+}
+
+.navbar--dark:hover {
+    color: #c1c1d2;
+}
+
+.nav-logo {
+    width: 200px;
+}
+
+.nav-item {
+    text-align: center;
+}
+
+.nav-link {
+    border-bottom: 4px solid transparent;
+    max-width: 12.5rem;
+    height: 100%;
+    color: #f1f1f1;
+}
+
+.nav-link:hover {
+    transition: 0.7s;
+    color: var(--aqua);
+}
+
+.nav-link:focus {
+    color: var(--aqua) !important;
+}
+
+.nav-link.active {
+    /* border-bottom: 4px solid var(--aqua); */
+    color: var(--aqua-dark) !important;
+}

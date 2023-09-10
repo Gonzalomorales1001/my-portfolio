@@ -26,7 +26,7 @@ function App() {
     <DarkModeContext.Provider value={{ dark, toggleDarkMode }}>
       <ThemeProvider theme={dark && darkTheme}>
         {/* <Nav /> */}
-        <div className={`text-light scrollspy dark-gradient`} data-bs-spy="scroll" data-bs-target=".navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabIndex="0">
+        <div className={`scrollspy light-gradient`} data-bs-spy="scroll" data-bs-target=".navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabIndex="0">
           <Me />
           <AboutMe />
           <Projects />
