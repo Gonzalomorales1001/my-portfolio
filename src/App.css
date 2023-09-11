@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+@font-face {
+  font-family: 'Gill Sans MT Pro Heavy';
+  src: url('/src/fonts/GillSansMTPro-Heavy.otf');
+}
+
 
 :root {
   --aqua: #46ffd5;
@@ -16,9 +22,9 @@
   background-color: #46ffd580;
 }
 
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
   display: none;
-}
+} */
 
 textarea {
   resize: none;
@@ -36,6 +42,10 @@ textarea {
   background-color: var(--light) !important;
 }
 
+.gill-sans{
+  font-family: 'Gill Sans MT Pro Heavy' ,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 /* custom classes */
 .light-gradient {
   transition: 0.5s;
@@ -45,19 +55,40 @@ textarea {
   background-image: radial-gradient(at 73% 96%, hsla(150, 78%, 91%, 1) 0px, transparent 50%), radial-gradient(at 17% 29%, hsla(160, 69%, 87%, 1) 0px, transparent 50%), radial-gradient(at 67% 4%, hsla(167, 0%, 100%, 1) 0px, transparent 50%), radial-gradient(at 52% 3%, hsla(158, 55%, 88%, 1) 0px, transparent 50%), radial-gradient(at 11% 97%, hsla(178, 63%, 86%, 0.95) 0px, transparent 50%), radial-gradient(at 85% 35%, hsla(164, 91%, 49%, 0.39) 0px, transparent 50%), radial-gradient(at 46% 96%, hsla(167, 100%, 49%, 0.31) 0px, transparent 50%);
 }
 
+.dark-gradient {
+  transition: 0.5s;
+  background-attachment: fixed;
+  background-color: hsla(161, 5%, 11%, 1);
+  background-image:
+    radial-gradient(at 71% 16%, hsla(28, 0%, 11%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, hsla(188, 0%, 0%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 1%, hsla(159, 91%, 5%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(20, 0%, 1%, 1) 0px, transparent 50%),
+    radial-gradient(at 66% 73%, hsla(165, 27%, 8%, 1) 0px, transparent 50%);
+}
+
 .gradient-1{
+  color: var(--light);
   background: radial-gradient(50% 123.47% at 50% 50%, #000000 0%, #FFFFFF 100%), radial-gradient(100% 100% at 50% 100%, #E9FFD8 0%, #001356 100%), linear-gradient(238.72deg, #0066FF 0%, #00CD21 100%), radial-gradient(100% 188.01% at 76.14% 0%, #00CAF7 0%, #FF00C7 100%), linear-gradient(0deg, #00C2FF 0%, #FFC700 100%), radial-gradient(59.2% 100% at 50% 0%, #8000FF 0%, #0085FF 100%), radial-gradient(100% 148.07% at 0% 0%, #FC8800 0%, #00FF94 100%);
     background-blend-mode: overlay, multiply, hard-light, color-dodge, color-burn, color-burn, normal;
 }
 
 .gradient-2 {
-background: linear-gradient(180deg, #0C003C 0%, #BFFFAF 100%), linear-gradient(165deg, #480045 25%, #E9EAAF 100%), linear-gradient(145deg, #480045 25%, #E9EAAF 100%), linear-gradient(300deg, rgba(233, 223, 255, 0) 0%, #AF89FF 100%), linear-gradient(90deg, #45EBA5 0%, #45EBA5 30%, #21ABA5 30%, #21ABA5 60%, #1D566E 60%, #1D566E 70%, #163A5F 70%, #163A5F 100%);
-  background-blend-mode: overlay, overlay, overlay, multiply, normal;
+  color: var(--light);
+background: linear-gradient(180deg, #FDEDDB 0%, #241E00 100%), linear-gradient(195.81deg, #00AED5 6.94%, #AA0085 81.59%), radial-gradient(111% 111% at 74.29% -11%, #87A900 0%, #FF0000 100%), linear-gradient(127.43deg, #B7D500 0%, #2200AA 100%);
+  background-blend-mode: overlay, difference, difference, normal;
 }
 
 .gradient-3 {
+  color: var(--light);
   background: linear-gradient(127.43deg, #00FFD1 0%, #08003A 100%), linear-gradient(307.27deg, #5200FF 0.37%, #04C600 100%), radial-gradient(100% 147.24% at 0% 31%, #00D1FF 0%, #698400 100%), radial-gradient(100% 140% at 100% 0%, #5ED500 0%, #2200AA 100%);
     background-blend-mode: difference, difference, difference, normal;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
 }
 
 .text-aqua {
@@ -72,8 +103,53 @@ background: linear-gradient(180deg, #0C003C 0%, #BFFFAF 100%), linear-gradient(1
   color: var(--aqua-dark)
 }
 
-/* app */
+.title{
+  color: var(--aqua);
+  font-weight: 700;
+}
 
+.button {
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  padding: 0.5rem 1.5rem;
+  color: rgb(150,200,200);
+  -webkit-box-shadow: 0px 30px 43px -14px rgba(0, 0, 0, 0.78);
+    -moz-box-shadow: 0px 30px 43px -14px rgba(0, 0, 0, 0.78);
+    box-shadow: 0px 30px 43px -14px rgba(0, 0, 0, 0.78);
+transition: 0.5s;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: hsla(240, 15%, 8%, 1);
+  background-image: radial-gradient(at 89% 95%, hsla(173, 100%, 50%, 0.08) 0px, transparent 50%), radial-gradient(at 8% 16%, hsla(190, 100%, 49%, 0.09) 0px, transparent 50%), radial-gradient(at 17% 82%, hsla(190, 100%, 49%, 0.05) 0px, transparent 50%);
+}
+
+.button:hover {
+    transition: 0.5s;
+      background-attachment: fixed;
+      background-color: hsla(169, 100%, 6%, 1);
+      background-image:
+        radial-gradient(at 100% 19%, hsla(177, 81%, 41%, 0.34) 0px, transparent 50%),
+        radial-gradient(at 63% 79%, hsla(169, 59%, 64%, 0.16) 0px, transparent 50%),
+        radial-gradient(at 19% 85%, hsla(185, 100%, 50%, 0.06) 0px, transparent 50%),
+        radial-gradient(at 48% 42%, hsla(175, 77%, 6%, 1) 0px, transparent 50%),
+        radial-gradient(at 55% 100%, hsla(185, 86%, 53%, 0.06) 0px, transparent 50%);
+}
+
+.button:active{
+  transition: 0.3s;
+-webkit-box-shadow: inset 0px -22px 109px -43px rgba(0, 0, 0, 0.78);
+  -moz-box-shadow: inset 0px -22px 109px -43px rgba(0, 0, 0, 0.78);
+  box-shadow: inset 0px -22px 109px -43px rgba(0, 0, 0, 0.78);
+}
+
+/* app */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Bootstrap Breakpoints */
 

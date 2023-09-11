@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import '../css/Nav.css'
 import { DarkModeContext } from '../App';
 import logoLight from '../assets/img/logo-transparent.png';
 import logoDark from '../assets/img/logo-transparent-dark.png'
@@ -21,7 +22,7 @@ const Nav = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="ms-auto navbar-nav">
                         <li className="nav-item d-flex justify-content-center align-items-center my-3">
-                            <a className="nav-link" href="#Me">¿Quién Soy?</a>
+                            <a className="nav-link active" href="#Me">Inicio</a>
                         </li>
                         <li className="nav-item d-flex justify-content-center align-items-center my-3">
                             <a className="nav-link" href="#AboutMe">Sobre Mí</a>
