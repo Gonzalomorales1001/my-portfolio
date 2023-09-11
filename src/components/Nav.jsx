@@ -30,9 +30,9 @@ const Nav = () => {
                         <li className="nav-item d-flex justify-content-center align-items-center my-3">
                             <a className="nav-link" href="#Projects">Mis Proyectos</a>
                         </li>
-                        <li className="nav-item d-flex justify-content-center align-items-center my-3">
+                        {/* <li className="nav-item d-flex justify-content-center align-items-center my-3">
                             <a className="nav-link" href="#Resources">Recursos</a>
-                        </li>
+                        </li> */}
                         <li className="nav-item d-flex justify-content-center align-items-center my-3">
                             <a className="nav-link" href="#ContactMe">Contáctame</a>
                         </li>

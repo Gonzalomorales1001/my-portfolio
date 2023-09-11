@@ -2,6 +2,14 @@ import React, { useContext } from 'react';
 import '../css/AboutMe.css';
 import cena from '../assets/img/cena2.jpg';
 import { DarkModeContext } from '../App';
+import HTML from '../assets/stack/html.svg'
+import CSS from '../assets/stack/css.svg'
+import Bootstrap from '../assets/stack/bootstrap.svg'
+import JavaScript from '../assets/stack/javascript.svg'
+import ReactJS from '../assets/stack/react.svg'
+import Node from '../assets/stack/nodejs.svg'
+import Express from '../assets/stack/express-white.svg'
+import GIT from '../assets/stack/git.svg'
 
 const AboutMe = () => {
     const { dark } = useContext(DarkModeContext);
@@ -20,42 +28,42 @@ const AboutMe = () => {
                         <div>
                             <h2 className="text-aqua text-uppercase mt-4">&lt;<span className="text-light">Sobre Mí</span>&nbsp; &frasl; &gt;</h2>
                             <p className="about-me__p">Empecé en el desarrollo web a mediados del 2022 en <a className="text-aqua text-decoration-none" href="https://rollingcodeschool.com/" target="__blank">Rolling Code School.</a> Actualmente sigo aprendiendo tecnologías nuevas, completando nuevos retos y mejorando mis habilidades técnicas.</p>
-                            <p className="about-me__p d-none d-md-block">Me considero una persona que ama los retos y los desafíos nuevos, ya que eso me ha hecho llegar hasta aquí.</p>
+                            <p className="about-me__p">Me considero una persona que ama los retos y los desafíos nuevos, ya que eso me ha hecho llegar hasta aquí.</p>
                         </div>
-                        <div>
+                        <div className='d-none d-md-block'>
                             <h4 className="text-aqua text-uppercase mt-4">&lt;<span className="text-light">Stack</span>&nbsp; &frasl; &gt;</h4>
-                            <div class="stack fw-200 d-none d-md-flex">
-                                <div class="d-flex flex-column align-items-center justify-content-center tools-container">
-                                    <img src="assets\html.svg" alt="HTML5" class="tools html" />
-                                    <span class="d-block my-2">HTML</span>
+                            <div className="stack fw-light d-flex">
+                                <div className="d-flex flex-column align-items-center justify-content-center tools-container">
+                                    <img src={HTML} alt="HTML5" className="tools html" />
+                                    <span className="d-block my-2">HTML</span>
                                 </div>
-                                <div class="d-flex flex-column align-items-center justify-content-center tools-container">
-                                    <img src="assets\css.svg" alt="CSS" class="tools css" />
-                                    <span class="d-block my-2">CSS</span>
+                                <div className="d-flex flex-column align-items-center justify-content-center tools-container">
+                                    <img src={CSS} alt="CSS" className="tools css" />
+                                    <span className="d-block my-2">CSS</span>
                                 </div>
-                                <div class="d-flex flex-column align-items-center justify-content-center tools-container">
-                                    <img src="assets\bootstrap.svg" alt="Bootstrap" class="tools bootstrap" />
-                                    <span class="d-block my-2">Bootstrap</span>
+                                <div className="d-flex flex-column align-items-center justify-content-center tools-container">
+                                    <img src={Bootstrap} alt="Bootstrap" className="tools bootstrap" />
+                                    <span className="d-block my-2">Bootstrap</span>
                                 </div>
-                                <div class="d-flex flex-column align-items-center justify-content-center tools-container">
-                                    <img src="assets\javascript.svg" alt="JavaScript" class="tools javascript" />
-                                    <span class="d-block my-2">JavaScript</span>
+                                <div className="d-flex flex-column align-items-center justify-content-center tools-container">
+                                    <img src={JavaScript} alt="JavaScript" className="tools javascript" />
+                                    <span className="d-block my-2">JavaScript</span>
                                 </div>
-                                <div class="d-flex flex-column align-items-center justify-content-center tools-container">
-                                    <img src="assets\react.svg" alt="ReactJS" class="tools react" />
-                                    <span class="d-block my-2">ReactJS</span>
+                                <div className="d-flex flex-column align-items-center justify-content-center tools-container">
+                                    <img src={ReactJS} alt="ReactJS" className="tools react" />
+                                    <span className="d-block my-2">ReactJS</span>
                                 </div>
-                                <div class="d-flex flex-column align-items-center justify-content-center tools-container">
-                                    <img src="assets\nodejs.svg" alt="NodeJS" class="tools node" />
-                                    <span class="d-block my-2">NodeJS</span>
+                                <div className="d-flex flex-column align-items-center justify-content-center tools-container">
+                                    <img src={Node} alt="NodeJS" className="tools node" />
+                                    <span className="d-block my-2">NodeJS</span>
                                 </div>
-                                <div class="d-flex flex-column align-items-center justify-content-center tools-container">
-                                    <img src="assets\express-white.svg" alt="Express" class="tools express" />
-                                    <span class="d-block my-2">Express</span>
+                                <div className="d-flex flex-column align-items-center justify-content-center tools-container">
+                                    <img src={Express} alt="Express" className="tools express" />
+                                    <span className="d-block my-2">Express</span>
                                 </div>
-                                <div class="d-flex flex-column align-items-center justify-content-center tools-container">
-                                    <img src="assets\git.svg" alt="GIT" class="tools git" />
-                                    <span class="d-block my-2">GIT</span>
+                                <div className="d-flex flex-column align-items-center justify-content-center tools-container">
+                                    <img src={GIT} alt="GIT" className="tools git" />
+                                    <span className="d-block my-2">GIT</span>
                                 </div>
                             </div>
                         </div>
