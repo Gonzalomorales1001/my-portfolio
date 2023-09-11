@@ -18,9 +18,11 @@ const AboutMe = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-md-4 flex-center">
-                        <div className="me-img-container">
-                            <img src={cena} alt="Gonzalo Morales" />
-                            <div className="me-img-container__shadow">
+                        <div className="aqua-border">
+                            <div className="me-img-container">
+                                <img src={cena} alt="Gonzalo Morales" />
+                                <div className="me-img-container__shadow">
+                                </div>
                             </div>
                         </div>
                     </div>

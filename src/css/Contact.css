@@ -1,0 +1,35 @@
+.contact-bg{
+    background-image: url('../assets/img/wallpapers/dark/img1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact-form {
+    padding: 0.5rem;
+    background-color: var(--dark);
+    border-radius: 2px;
+    position: relative;
+    z-index: 90;
+}
+
+.contact-form input, .contact-form textarea {
+    border: none;
+    outline: none;
+    padding: 7px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid var(--aqua-dark);
+    color: var(--aqua-light);
+    font-weight: 200;
+}
+
+@media (min-width:768px) {
+    .contact-form {
+        padding: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 15px;
+    }
+}
