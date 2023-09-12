@@ -1,5 +1,5 @@
 .navbar {
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
     backdrop-filter: blur(10px);
@@ -12,6 +12,19 @@
 
 .navbar--dark:hover {
     color: #c1c1d2;
+}
+
+.navbar-toggler {
+    border: none;
+    border-radius: 5px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url('../assets/svg/navbar-toggler-icon.svg');
 }
 
 .nav-logo {

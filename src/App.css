@@ -111,7 +111,7 @@ background: linear-gradient(180deg, #FDEDDB 0%, #241E00 100%), linear-gradient(1
 .button {
   border: none;
   outline: none;
-  border-radius: 15px;
+  border-radius: 5px;
   padding: 0.5rem 1.5rem;
   color: rgb(150,200,200);
   -webkit-box-shadow: 0px 30px 43px -14px rgba(0, 0, 0, 0.78);
@@ -157,6 +157,10 @@ background: linear-gradient(180deg, #FDEDDB 0%, #241E00 100%), linear-gradient(1
   position: relative;
 }
 
+.fw-200{
+  font-weight: 200;
+}
+
 .aqua-border::before {
   display: block;
   content: '';
@@ -168,6 +172,14 @@ background: linear-gradient(180deg, #FDEDDB 0%, #241E00 100%), linear-gradient(1
   left: -10px;
   border-radius: 2px;
   opacity: 0.7;
+}
+
+.box {
+  padding: 0.5rem;
+  background-color: var(--dark);
+  border-radius: 2px;
+  position: relative;
+  z-index: 90;
 }
 
 /* Bootstrap Breakpoints */
