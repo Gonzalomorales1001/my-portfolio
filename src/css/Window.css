@@ -1,6 +1,6 @@
 .window-overlay{
     background-color: rgba(0,0,0,0.2);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(5px);
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -14,12 +14,22 @@
 }
 
 .window {
-    border-radius: 5px;
     height: 80vh;
     width: 80vw;
-    background-color: var(--dark);
+    background-color: rgba(0,0,0,0.6);
     color: var(--light);
     z-index: 99;
+    position: relative;
+}
+
+.window>*::-webkit-scrollbar {
+    background-color: transparent;
+    width: 5px;
+}
+
+.window>*::-webkit-scrollbar-thumb {
+    background-color: #0fb4a480;
+    /* border-radius: 2px; */
 }
 
 .window--maximized {
@@ -35,13 +45,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom: 1px solid var(--aqua-dark);
+    color: var(--light);
+    border-bottom: 1px solid var(--aqua);
 }
 
 .window__header__title {
+    padding: 0px;
+    margin: 0px;
     padding-left: 1rem;
+    font-weight: 400;
+    font-size: 1rem;
 }
 
 .window__header__button{
@@ -51,24 +64,48 @@
     border: none;
     background-color: transparent;
     width: 60px;
+    height: 35px;
     color: var(--light);
+    font-weight: 200;
+    font-size: 12px;
 }
 
 .window__header__button:hover{
     transition: 0.2s;
-    background-color: rgba(0,0,0,0.3);
+    background-color: var(--aqua-dark);
+    color: var(--dark);
 }
 
 .window__header__button--close {
-    background-color: rgb(200, 50, 50);
-    border-top-right-radius: 5px;
+    font-size: 15px;
 }
 
 .window__header__button--close:hover {
-    background-color: rgb(150, 30, 30);
+    background-color: rgb(200, 30, 30);
+    color: var(--light);
 }
 
 .window__body {
-    height: 100%;
+    /* max-height: 85%; */
     overflow-y: scroll;
+}
+
+.window__footer {
+    height: auto;
+    border-top: 1px solid var(--aqua-dark);
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 0px;
+}
+
+.window__footer p {
+    margin: 0 15px;
+}
+
+.window__footer__icon {
+    padding: 1.5rem 1.8rem;
+    font-size: 24px;
+    background-color: var(--aqua);
+    color: var(--dark);
 }
