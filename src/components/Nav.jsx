@@ -7,6 +7,7 @@ import logoDark from '../assets/img/logo-transparent-dark.png'
 const Nav = () => {
     const { dark, toggleDarkMode } = useContext(DarkModeContext);
     const [scrolled, setScrolled] = useState(false);
+    const [rotated, setRotated] = useState(false);
 
     return (
         <nav className={`navbar navbar-expand-md text-light p-0`}>
@@ -16,8 +17,8 @@ const Nav = () => {
                         <img className='nav-logo' src={logoLight} alt="Gonzalo Morales Logo" />
                     </a>
                 </div>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
+                <button className="navbar-toggler" type="button" onClick={() => setRotated(!rotated)} data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className={`navbar-toggler-icon ${rotated && 'rotate-90-ccw'}`}></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="ms-auto navbar-nav">
