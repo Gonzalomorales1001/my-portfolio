@@ -19,7 +19,7 @@ const Projects = () => {
         setShowWindow(false);
     }
     return (
-        <section className={`vh-100 ${dark && 'text-light'} position-relative`} id='Projects'>
+        <section className={`section ${dark && 'text-light'} position-relative`} id='Projects'>
             {
                 showWindow && (
                     <Window title={title} projects={projects} closeWindow={closeWindow} />

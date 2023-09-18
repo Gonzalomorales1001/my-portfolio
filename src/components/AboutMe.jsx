@@ -14,7 +14,7 @@ import GIT from '../assets/stack/git.svg'
 const AboutMe = () => {
     const { dark } = useContext(DarkModeContext);
     return (
-        <section className={`vh-100 flex-center ${dark && 'text-light'}`} id='AboutMe'>
+        <section className={`section flex-center ${dark && 'text-light'}`} id='AboutMe'>
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-md-4 flex-center">
