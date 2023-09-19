@@ -1,0 +1,54 @@
+{
+    "Nav": {
+        "home": "Home",
+        "aboutMe": "About Me",
+        "projects": "My Projects",
+        "contact" : "Contact Me"
+    },
+    "Me": {
+        "hi": "Welcome to my portfolio!",
+        "i": "I'm",
+        "profession": "Web Developer",
+        "button": "Who I am?"
+    },
+    "AboutMe": {
+        "title": "About Me",
+        "t1": "I started web development in middle of 2022 at",
+        "t2": "I am currently learning other technologies at the UTN: FRT, completing new challenges and improving my technical skills.",
+        "t3": "I consider myself a person who loves challenges, since that has made me get here.",
+        "button": "View Certificate" 
+    },
+    "Projects": {
+        "title": "My Projects",
+        "h4": "I want to show you part of my career with practices and projects that I did over time...",
+        "practices-title": "Practices",
+        "practices-desc": "Here I keep the small practices and challenges that I have carried out to strengthen my knowledge",
+        "projects-title": "Personal Projects",
+        "projects-desc": "In this section you will find my personal projects",
+        "team-title": "Team Projects",
+        "team-desc": "Here I keep the projects done as a team and different collaborations",
+        "all-title": "Projects",
+        "all-desc": "Here you can see all the projects, practices, team participations that I have done using different technologies, both to learn and to improve my technical skills.",
+        "button": "Open Folder" 
+    },
+    "Window": {
+        "prev": "Previous",
+        "next": "Next",
+        "deploy": "View Deploy",
+        "code": "View Code",
+        "elements": "Element(s)"
+    },
+    "Contact": {
+        "title": "Contact",
+        "subtitle": "More Info",
+        "form-title": "Feel free to send a message...",
+        "name-label": "Name",
+        "email-label": "Email",
+        "message-label": "Message",
+        "send": "Send",
+        "name-error": "Name must be between 3 and 30 characters",
+        "email-error": "Invalid Email",
+        "message-error": "Message can't be empty",
+        "success": "Message has been sent successfully"
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "Nav": {
+        "home": "Inicio",
+        "aboutMe": "Sobre Mí",
+        "projects": "Mis Proyectos",
+        "contact" : "Contacto"
+    },
+    "Me": {
+        "hi": "¡Bienvenido a mi Portfolio!",
+        "i": "Soy",
+        "profession": "Desarrollador Web",
+        "button": "¿Quién Soy?"
+    },
+    "AboutMe": {
+        "title": "Sobre Mí",
+        "t1": "Empecé en el desarrollo web a mediados de 2022 en",
+        "t2": "Actualmente me encuentro aprendiendo otras tecnologías en Universidad Tecnológica Nacional: Facultad Regional Tucumán, completando nuevos retos y mejorando mis habilidades técnicas.",
+        "t3": "Me considero una persona que ama los retos y los desafíos nuevos, ya que eso me ha hecho llegar hasta aquí.",
+        "button": "Ver Certificación" 
+    },
+    "Projects": {
+        "title": "Mis Proyectos",
+        "h4": "Quiero mostrarte parte de mi trayectoria con prácticas y proyectos que hice a lo largo del tiempo...",
+        "practices-title": "Prácticas",
+        "practices-desc": "Aquí podras ver las pequeñas practicas y retos que he realizado para afianzar mis conocimientos",
+        "projects-title": "Proyectos Personales",
+        "projects-desc": "En esta sección encontraras mis proyectos personales",
+        "team-title": "Proyectos en Equipo",
+        "team-desc": "Aquí guardo los proyectos hechos en equipo y distintas colaboraciones",
+        "all-title": "Proyectos",
+        "all-desc": "Aquí podrás ver todos los proyectos, practicas, participaciones en equipo que he hecho usando distintas tecnologías, tanto para aprender como para mejorar mis habilidades técnicas.",
+        "button": "Abrir Carpeta" 
+    },
+    "Window": {
+        "prev": "Anterior",
+        "next": "Siguiente",
+        "deploy": "Ver Proyecto",
+        "code": "Ver Código",
+        "elements": "Elemento(s)"
+    },
+    "Contact": {
+        "title": "Contacto",
+        "subtitle": "Más Información",
+        "form-title": "No dudes en dejarme un mensaje...",
+        "name-label": "Nombre",
+        "email-label": "Correo Electrónico",
+        "message-label": "Mensaje",
+        "send": "Enviar",
+        "name-error": "El nombre debe tener entre 3 y 30 caracteres",
+        "email-error": "Email no válido",
+        "message-error": "El mensaje no puede estar vacío",
+        "success": "El mensaje ha sido enviado correctamente"
+    }
+}

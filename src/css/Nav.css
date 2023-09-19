@@ -13,6 +13,32 @@
     color: #c1c1d2;
 }
 
+.navbar-language {
+    display: inline-block;
+    color: var(--aqua);
+}
+
+.navbar-language select {
+    background-color: transparent;
+    color: var(--aqua);
+    border: none;
+    outline: none;
+    padding: 5px 10px 5px 2px;
+    border-radius: 5px;
+}
+
+.navbar-language option {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--dark);
+    font-size: 1.1rem;
+    padding: 10px;
+}
+
+.navbar-language option:hover {
+    color: var(--dark);
+    background-color: var(--aqua);
+}
+
 .navbar-toggler {
     border: none;
     border-radius: 5px;

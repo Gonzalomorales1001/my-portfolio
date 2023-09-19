@@ -4,10 +4,11 @@ import minimize from '../assets/svg/minimize.svg';
 import maximizeFalse from '../assets/svg/maximize-false.svg';
 import maximizeTrue from '../assets/svg/maximize-true.svg';
 import close from '../assets/svg/close.svg'
+import { useTranslation } from 'react-i18next';
 
 const Window = ({ title, projects, closeWindow }) => {
     const [maximized, setMaximized] = useState(JSON.parse(localStorage.getItem('maximized')) || false);
-
+    const [t, i18n] = useTranslation("global");
     useEffect(() => {
         if (window.innerWidth < 768) {
             setMaximized(true);
@@ -21,6 +22,8 @@ const Window = ({ title, projects, closeWindow }) => {
     const toggleWindowSize = () => {
         setMaximized(!maximized);
     }
+
+    console.log(i18n.language)
 
     return (
         <div className="window-overlay">
@@ -55,11 +58,11 @@ const Window = ({ title, projects, closeWindow }) => {
                                                                 <>
                                                                     <button className="carousel-control-prev" type="button" data-bs-target={`#project-${index + 1}-carousel`} data-bs-slide="prev">
                                                                         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                                        <span className="visually-hidden">Anterior</span>
+                                                                        <span className="visually-hidden">{t('Window.prev')}</span>
                                                                     </button>
                                                                     <button className="carousel-control-next" type="button" data-bs-target={`#project-${index + 1}-carousel`} data-bs-slide="next">
                                                                         <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                                                        <span className="visually-hidden">Siguiente</span>
+                                                                        <span className="visually-hidden">{t('Window.next')}</span>
                                                                     </button>
                                                                 </>
                                                             )
@@ -68,11 +71,11 @@ const Window = ({ title, projects, closeWindow }) => {
                                                 </header>
                                                 <main className="project-main">
                                                     <h4 className="text-aqua mt-4">&lt;<span className="text-light">{project.title}</span>&nbsp; &frasl; &gt;</h4>
-                                                    <p>{project.description}</p>
+                                                    <p>{i18n.language === "es" ? project.description_es : project.description_en}</p>
                                                 </main>
                                                 <footer className="project-footer">
-                                                    <a href={project.deploy} target='__blank' className="button w-100">Ver Proyecto</a>
-                                                    <a href={project.code} target='__blank' className="button w-100">Ver Código</a>
+                                                    <a href={project.deploy} target='__blank' className="button w-100">{t('Window.deploy')}</a>
+                                                    <a href={project.code} target='__blank' className="button w-100">{t('Window.code')}</a>
                                                 </footer>
                                             </article>
                                         </div>
@@ -89,7 +92,7 @@ const Window = ({ title, projects, closeWindow }) => {
                     <div className="window__footer__icon">
                         <i className="fa fa-folder"></i>
                     </div>
-                    <p>{projects.length} elemento(s)</p>
+                    <p>{projects.length} {t('Window.elements')}</p>
                 </footer>
             </article>
         </div>

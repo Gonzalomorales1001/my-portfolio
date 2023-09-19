@@ -11,8 +11,12 @@ import Node from '../assets/stack/nodejs.svg'
 import Express from '../assets/stack/express-white.svg'
 import GIT from '../assets/stack/git.svg'
 
+import certification from '../assets/gonzalomorales-certification.png';
+import { useTranslation } from 'react-i18next';
+
 const AboutMe = () => {
     const { dark } = useContext(DarkModeContext);
+    const [t] = useTranslation("global");
     return (
         <section className={`section flex-center ${dark && 'text-light'}`} id='AboutMe'>
             <div className="container">
@@ -28,10 +32,11 @@ const AboutMe = () => {
                     </div>
                     <div className="col-12 col-md-8 text-center text-md-start">
                         <div>
-                            <h2 className="text-aqua text-uppercase mt-4">&lt;<span className="text-light">Sobre Mí</span>&nbsp; &frasl; &gt;</h2>
-                            <p className="about-me__p">Empecé en el desarrollo web a mediados del 2022 en <a className="text-aqua text-decoration-none" href="https://rollingcodeschool.com/" target="__blank">Rolling Code School.</a> Actualmente sigo aprendiendo tecnologías nuevas, completando nuevos retos y mejorando mis habilidades técnicas.</p>
-                            <p className="about-me__p">Me considero una persona que ama los retos y los desafíos nuevos, ya que eso me ha hecho llegar hasta aquí.</p>
+                            <h2 className="text-aqua text-uppercase mt-4">&lt;<span className="text-light">{t("AboutMe.title")}</span>&nbsp; &frasl; &gt;</h2>
+                            <p className="about-me__p">{t("AboutMe.t1")} <a className="text-aqua text-decoration-none" href="https://rollingcodeschool.com/" target="__blank">Rolling Code School.</a> {t("AboutMe.t2")}</p>
+                            <p className="about-me__p">{t("AboutMe.t3")}</p>
                         </div>
+                        <a href={certification} target='__blank' className="button d-block">{t("AboutMe.button")}</a>
                         <div className='d-none d-md-block'>
                             <h4 className="text-aqua text-uppercase mt-4">&lt;<span className="text-light">Stack</span>&nbsp; &frasl; &gt;</h4>
                             <div className="stack fw-light d-flex">

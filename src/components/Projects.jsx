@@ -5,9 +5,11 @@ import '../css/Projects.css'
 import { practices, myProjects, teamProjects } from '../data/data';
 import { allProjects } from '../data/data';
 import Window from './Window';
+import { useTranslation } from 'react-i18next';
 
 const Projects = () => {
     const { dark } = useContext(DarkModeContext);
+    const [t] = useTranslation("global");
     const [title, setTitle] = useState(null);
     const [projects, setProjects] = useState(null);
     const [showWindow, setShowWindow] = useState(false);
@@ -28,8 +30,8 @@ const Projects = () => {
             }
             <div className="container flex-column d-flex justify-content-center gap-2 h-100">
                 {/* Todos los proyectos */}
-                <h2 className="text-aqua text-uppercase mt-4">&lt;<span className="text-light">Mis proyectos</span>&nbsp; &frasl; &gt;</h2>
-                <h4 className='projects__desc'>Quiero mostrarte parte de mi trayectoria con prácticas y proyectos que hice a lo largo del tiempo</h4>
+                <h2 className="text-aqua text-uppercase mt-4">&lt;<span className="text-light">{t('Projects.title')}</span>&nbsp; &frasl; &gt;</h2>
+                <h4 className='projects__desc'>{t("Projects.h4")}</h4>
                 <div className="row">
                     <div className="col">
                         <div className="aqua-border">
@@ -38,11 +40,11 @@ const Projects = () => {
                                     <img src={folder} alt="folder" />
                                 </div>
                                 <div className='ps-3'>
-                                    <h4 className="text-aqua text-uppercase mt-4">&lt;<span className="text-light">Proyectos</span>&nbsp; &frasl; &gt;</h4>
+                                    <h4 className="text-aqua text-uppercase mt-4">&lt;<span className="text-light">{t('Projects.all-title')}</span>&nbsp; &frasl; &gt;</h4>
                                     <p className="fw-200">
-                                        Aquí podrás ver todos los proyectos, practicas, participaciones en equipo que he hecho usando distintas tecnologías, tanto para aprender como para mejorar mis habilidades técnicas.
+                                        {t('Projects.all-desc')}
                                     </p>
-                                    <button className="button" onClick={() => openWindow('Mis Proyectos', allProjects)}>Abrir</button>
+                                    <button className="button" onClick={() => openWindow(t('Projects.all-title'), allProjects)}>{t('Projects.button')}</button>
                                 </div>
                             </div>
                         </div>
@@ -57,11 +59,11 @@ const Projects = () => {
                                     <img src={folder} alt="folder" />
                                 </div>
                                 <div className='ps-3'>
-                                    <h4 className="text-aqua text-uppercase mt-4">&lt;<span className="text-light">Prácticas</span>&nbsp; &frasl; &gt;</h4>
+                                    <h4 className="text-aqua text-uppercase mt-4">&lt;<span className="text-light">{t('Projects.practices-title')}</span>&nbsp; &frasl; &gt;</h4>
                                     <p className="fw-200">
-                                        Aquí podras ver las pequeñas practicas y retos que he realizado para afianzar mis conocimientos
+                                        {t('Projects.practices-desc')}
                                     </p>
-                                    <button className="button" onClick={() => openWindow('Prácticas', practices)}>Abrir</button>
+                                    <button className="button" onClick={() => openWindow({t('Projects.practices-title')}, practices)}>{t('Projects.button')}</button>
                                 </div>
                             </div>
                         </div>
@@ -75,11 +77,11 @@ const Projects = () => {
                                     <img src={folder} alt="folder" />
                                 </div>
                                 <div className='ps-3'>
-                                    <h4 className="text-aqua text-uppercase mt-4">&lt;<span className="text-light">Proyectos</span>&nbsp; &frasl; &gt;</h4>
+                                    <h4 className="text-aqua text-uppercase mt-4">&lt;<span className="text-light">{t('Projects.projects-title')}</span>&nbsp; &frasl; &gt;</h4>
                                     <p className="fw-200">
-                                        En esta sección encontraras mis proyectos personales
+                                        {t('Projects.projects-desc')}
                                     </p>
-                                    <button className="button" onClick={() => openWindow('Proyectos Personales', myProjects)}>Abrir</button>
+                                    <button className="button" onClick={() => openWindow({t('Projects.projects-title')}, myProjects)}>{t('Projects.button')}</button>
                                 </div>
                             </div>
                         </div>
@@ -93,11 +95,11 @@ const Projects = () => {
                                     <img src={folder} alt="folder" />
                                 </div>
                                 <div className='ps-3'>
-                                    <h4 className="text-aqua text-uppercase mt-4">&lt;<span className="text-light">Proyectos en Equipo</span>&nbsp; &frasl; &gt;</h4>
+                                    <h4 className="text-aqua text-uppercase mt-4">&lt;<span className="text-light">{t('Projects.team-title')}</span>&nbsp; &frasl; &gt;</h4>
                                     <p className="fw-200">
-                                        Por último, aqui guardo mis proyectos y colaboraciones hechas con otras personas
+                                        {t('Projects.team-desc')}
                                     </p>
-                                    <button className="button" onClick={() => openWindow('Proyectos en Equipo', teamProjects)}>Abrir</button>
+                                    <button className="button" onClick={() => openWindow({t('Projects.team-title')}, teamProjects)}>{t('Projects.button')}</button>
                                 </div>
                             </div>
                         </div>
