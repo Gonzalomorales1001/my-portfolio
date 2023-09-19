@@ -21,9 +21,9 @@ const Nav = () => {
                 </div>
                 <div className="navbar-language">
                     <i className="fa fa-globe"></i>
-                    <select name="nav-lang" id="nav-lang" onChange={(e) => i18n.changeLanguage(e.target.value)}>
-                        <option value="en">EN</option>
+                    <select name="nav-lang" id="nav-lang" defaultValue={'ES'} onChange={(e) => i18n.changeLanguage(e.target.value)}>
                         <option value="es">ES</option>
+                        <option value="en">EN</option>
                     </select>
                 </div>
                 <button className="navbar-toggler" type="button" onClick={() => setRotated(!rotated)} data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
