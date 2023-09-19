@@ -10,6 +10,10 @@
   --dark: #13131A;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   font-family: 'Kantumruy Pro', sans-serif;
 }
@@ -113,6 +117,7 @@ background: linear-gradient(180deg, #FDEDDB 0%, #241E00 100%), linear-gradient(1
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
   background-color: hsla(240, 15%, 8%, 1);
   background-image: radial-gradient(at 89% 95%, hsla(173, 100%, 50%, 0.08) 0px, transparent 50%), radial-gradient(at 8% 16%, hsla(190, 100%, 49%, 0.09) 0px, transparent 50%), radial-gradient(at 17% 82%, hsla(190, 100%, 49%, 0.05) 0px, transparent 50%);
   text-decoration: none;
@@ -122,6 +127,7 @@ background: linear-gradient(180deg, #FDEDDB 0%, #241E00 100%), linear-gradient(1
 .button:hover {
     transition: 0.5s;
       background-attachment: fixed;
+      background-size: cover;
       background-color: hsla(169, 100%, 6%, 1);
       background-image:
         radial-gradient(at 100% 19%, hsla(177, 81%, 41%, 0.34) 0px, transparent 50%),
@@ -243,5 +249,26 @@ background: linear-gradient(180deg, #FDEDDB 0%, #241E00 100%), linear-gradient(1
   100% {
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
+  }
+}
+
+.box, .aqua-border {
+  view-timeline-name: --element;
+  view-timeline-axis: block;
+  animation-timeline: --element;
+  animation-name: show;
+  animation-range: entry 5% cover 20%;
+  animation-fill-mode: both;
+}
+
+@keyframes show {
+  from {
+    opacity: 0.1;
+    scale: 25%;
+  }
+
+  to {
+    opacity: 1;
+    scale: 100%;
   }
 }

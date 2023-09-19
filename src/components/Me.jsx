@@ -6,7 +6,7 @@ const Me = () => {
     const { dark } = useContext(DarkModeContext);
     return (
         <section id="Me">
-            <div className={`vh-100 ${dark ? 'presentation-dark-wallpaper' : 'presentation-light-wallpaper'}`}>
+            <div className={`vh-100 presentation-wallpaper ${dark ? 'presentation-dark-wallpaper' : 'presentation-light-wallpaper'}`}>
                 <div className="overlay">
                     <div className="presentation">
                         <div className={`presentation__text ${dark && 'text-light'}`}>

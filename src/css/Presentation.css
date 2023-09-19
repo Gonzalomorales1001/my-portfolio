@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
 
-.presentation-dark-wallpaper{
-    background-image: url('../assets/img/wallpapers/dark/aurora.jpg');
+.presentation-wallpaper {
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.presentation-dark-wallpaper{
+    background-image: url('../assets/img/wallpapers/dark/aurora.jpg');
 }
 
 .presentation {

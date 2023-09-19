@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { DarkModeContext } from '../App';
 import folder from '../assets/svg/folder.svg';
 import '../css/Projects.css'
-import { practices, projects, teamProjects } from '../data/data';
+import { practices, myProjects, teamProjects } from '../data/data';
 import Window from './Window';
 
 const Projects = () => {
@@ -56,7 +56,7 @@ const Projects = () => {
                                     <p className="fw-200">
                                         En esta sección encontraras mis proyectos personales
                                     </p>
-                                    <button className="button" onClick={() => openWindow('Proyectos Personales', practices)}>Abrir</button>
+                                    <button className="button" onClick={() => openWindow('Proyectos Personales', myProjects)}>Abrir</button>
                                 </div>
                             </div>
                         </div>
@@ -74,7 +74,7 @@ const Projects = () => {
                                     <p className="fw-200">
                                         Por último, aqui guardo mis proyectos y colaboraciones hechas con otras personas
                                     </p>
-                                    <button className="button" onClick={() => openWindow('Proyectos en Equipo', practices)}>Abrir</button>
+                                    <button className="button" onClick={() => openWindow('Proyectos en Equipo', teamProjects)}>Abrir</button>
                                 </div>
                             </div>
                         </div>
