@@ -34,8 +34,8 @@ const Window = ({ title, projects, closeWindow }) => {
                     </div>
                 </header>
                 <main className="window__body">
-                    <div className="container">
-                        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                    <div className="container h-100">
+                        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">
                             {
                                 projects ? (
                                     projects.map((project, index) => (

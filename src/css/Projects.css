@@ -30,3 +30,7 @@
         height: 100px;
     }
 }
+
+.projects__desc{
+    font-weight: 200;
+}

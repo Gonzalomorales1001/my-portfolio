@@ -3,6 +3,7 @@ import { DarkModeContext } from '../App';
 import folder from '../assets/svg/folder.svg';
 import '../css/Projects.css'
 import { practices, myProjects, teamProjects } from '../data/data';
+import { allProjects } from '../data/data';
 import Window from './Window';
 
 const Projects = () => {
@@ -26,7 +27,29 @@ const Projects = () => {
                 )
             }
             <div className="container flex-column d-flex justify-content-center gap-2 h-100">
+                {/* Todos los proyectos */}
+                <h2 className="text-aqua text-uppercase mt-4">&lt;<span className="text-light">Mis proyectos</span>&nbsp; &frasl; &gt;</h2>
+                <h4 className='projects__desc'>Quiero mostrarte parte de mi trayectoria con prácticas y proyectos que hice a lo largo del tiempo</h4>
                 <div className="row">
+                    <div className="col">
+                        <div className="aqua-border">
+                            <div className="box my-4 d-flex">
+                                <div className="folder">
+                                    <img src={folder} alt="folder" />
+                                </div>
+                                <div className='ps-3'>
+                                    <h4 className="text-aqua text-uppercase mt-4">&lt;<span className="text-light">Proyectos</span>&nbsp; &frasl; &gt;</h4>
+                                    <p className="fw-200">
+                                        Aquí podrás ver todos los proyectos, practicas, participaciones en equipo que he hecho usando distintas tecnologías, tanto para aprender como para mejorar mis habilidades técnicas.
+                                    </p>
+                                    <button className="button" onClick={() => openWindow('Mis Proyectos', allProjects)}>Abrir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* Practicas, proyectos, proyectos en equipo */}
+                {/* <div className="row">
                     <div className="col">
                         <div className="aqua-border">
                             <div className="box my-4 d-flex">
@@ -79,7 +102,7 @@ const Projects = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     )

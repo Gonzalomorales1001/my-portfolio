@@ -97,9 +97,13 @@
     align-items: center;
 }
 
+.window__body__row {
+    height: 100% !important;
+}
+
 .window__footer {
     height: auto;
-    border-top: 1px solid var(--aqua-dark);
+    border-top: 1px solid var(--aqua);
     display: flex;
     align-items: center;
     position: relative;
