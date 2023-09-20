@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import '../css/AboutMe.css';
-import cena from '../assets/img/cena2.jpg';
+import gonzalo from '../assets/img/gonzalo.webp';
 import HTML from '../assets/stack/html.svg'
 import CSS from '../assets/stack/css.svg'
 import Bootstrap from '../assets/stack/bootstrap.svg'
@@ -21,7 +21,7 @@ const AboutMe = () => {
                     <div className="col-12 col-md-4 flex-center">
                         <div className="aqua-border">
                             <div className="me-img-container">
-                                <img src={cena} alt="Gonzalo Morales" />
+                                <img src={gonzalo} alt="Gonzalo Morales" />
                                 <div className="me-img-container__shadow">
                                 </div>
                             </div>

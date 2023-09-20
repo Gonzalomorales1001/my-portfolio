@@ -36,7 +36,7 @@
 .presentation__title{
     font-size: 36px;
     text-transform: uppercase;
-    font-family: 'Bungee Outline', cursive;
+    font-family: 'Bungee Outline', sans-serif, cursive;
 }
 
 .presentation__subtitle{
@@ -54,7 +54,7 @@
 }
 
 .bungee-outline{
-    font-family: 'Bungee Outline', cursive;
+    font-family: 'Bungee Outline', sans-serif, cursive;
 }
 
 @media (min-width:992px) {
