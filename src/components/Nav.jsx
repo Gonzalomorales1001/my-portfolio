@@ -1,12 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import '../css/Nav.css'
-import { DarkModeContext } from '../App';
-import logoLight from '../assets/img/logo-transparent.png';
-import logoDark from '../assets/img/logo-transparent-dark.png'
+import logo from '../assets/img/logo-transparent.png';
 import { useTranslation } from 'react-i18next';
 
 const Nav = () => {
-    const { dark, toggleDarkMode } = useContext(DarkModeContext);
     const [t, i18n] = useTranslation("global");
     const [scrolled, setScrolled] = useState(false);
     const [rotated, setRotated] = useState(false);
@@ -16,7 +13,7 @@ const Nav = () => {
             <div className="container">
                 <div className='my-3'>
                     <a className="navbar-brand" href="#">
-                        <img className='nav-logo' src={logoLight} alt="Gonzalo Morales Logo" />
+                        <img className='nav-logo' src={logo} alt="Gonzalo Morales Logo" />
                     </a>
                 </div>
                 <div className="navbar-language">

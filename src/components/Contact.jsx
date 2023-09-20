@@ -1,13 +1,11 @@
-import React, { useContext, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { useForm, useFormState } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import '../css/Contact.css';
-import { DarkModeContext } from '../App';
 import Swal from 'sweetalert2';
 import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
-    const dark = useContext(DarkModeContext);
     const [t] = useTranslation("global");
     const form = useRef();
 
@@ -33,7 +31,7 @@ const Contact = () => {
     const emailRegExp = /^(?:[^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*|"[^\n"]+")@(?:[^<>()[\].,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,63}$/i;
     return (
         <section id="ContactMe">
-            <div className={`section flex-center ${dark && 'text-light'}`}>
+            <div className={`section flex-center text-light`}>
                 <div className={`container`}>
                     <div className="row row-cols-1 row-cols-md-2 w-100">
                         <div className="col">

@@ -1,14 +1,12 @@
-import React, { useState, useContext } from 'react';
-import { DarkModeContext } from '../App';
+import React, { useState } from 'react';
 import folder from '../assets/svg/folder.svg';
 import '../css/Projects.css'
-import { practices, myProjects, teamProjects } from '../data/data';
+// import { practices, myProjects, teamProjects } from '../data/data';
 import { allProjects } from '../data/data';
 import Window from './Window';
 import { useTranslation } from 'react-i18next';
 
 const Projects = () => {
-    const { dark } = useContext(DarkModeContext);
     const [t] = useTranslation("global");
     const [title, setTitle] = useState(null);
     const [projects, setProjects] = useState(null);
@@ -22,7 +20,7 @@ const Projects = () => {
         setShowWindow(false);
     }
     return (
-        <section className={`section ${dark && 'text-light'} position-relative`} id='Projects'>
+        <section className={`section text-light position-relative`} id='Projects'>
             {
                 showWindow && (
                     <Window title={title} projects={projects} closeWindow={closeWindow} />

@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 import '../css/AboutMe.css';
 import cena from '../assets/img/cena2.jpg';
-import { DarkModeContext } from '../App';
 import HTML from '../assets/stack/html.svg'
 import CSS from '../assets/stack/css.svg'
 import Bootstrap from '../assets/stack/bootstrap.svg'
@@ -10,15 +10,12 @@ import ReactJS from '../assets/stack/react.svg'
 import Node from '../assets/stack/nodejs.svg'
 import Express from '../assets/stack/express-white.svg'
 import GIT from '../assets/stack/git.svg'
-
 import certification from '../assets/gonzalomorales-certification.png';
-import { useTranslation } from 'react-i18next';
 
 const AboutMe = () => {
-    const { dark } = useContext(DarkModeContext);
     const [t] = useTranslation("global");
     return (
-        <section className={`section flex-center ${dark && 'text-light'}`} id='AboutMe'>
+        <section className="section flex-center text-light" id='AboutMe'>
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-md-4 flex-center">

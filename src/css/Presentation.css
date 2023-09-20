@@ -5,10 +5,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.presentation-dark-wallpaper{
-    background-image: url('../assets/img/wallpapers/dark/aurora.jpg');
+    background-image: url('../assets/img/me-wallpaper.webp');
 }
 
 .presentation {
@@ -43,18 +40,13 @@
 }
 
 .presentation__subtitle{
-    background-color: rgba(0, 0, 0, 0.2);
-    color: var(--light);
+    color: var(--dark);
+    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 15px;
     padding: 5px 15px;
     display: inline;
     font-size: large;
     margin-bottom: 2rem;
-}
-
-.presentation__subtitle--dark {
-    color: var(--dark);
-    background-color: rgba(255, 255, 255, 0.4);
 }
 
 .presentation__p {
