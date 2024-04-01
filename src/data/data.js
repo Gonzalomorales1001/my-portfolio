@@ -44,30 +44,33 @@ export const teamProjects = [];
 
 export const allProjects = [
     {
+        title: 'WRPF Argentina Web',
+        img: ['https://i.postimg.cc/RVts2xVR/wrpf-catpura.webp'],
+        description_es: 'Página web de WRPF Argentina, una federación de powerlifting argentino (en desarrollo)',
+        description_en: 'Website of WRPF Argentina, an Argentine powerlifting federation (in development)',
+        deploy: 'https://wrpf-argentina-web.vercel.app/',
+    },
+    {
+        title: 'Sneaker World',
+        img: ['https://i.postimg.cc/bwjChVZj/sneaker-world-captura.webp'],
+        description_es: 'Sneaker World es una tienda online de calzados para Argentina (en desarrollo)',
+        description_en: 'Sneaker World is an online footwear store for Argentina (in development)',
+        deploy: 'https://sneakerworld-sand.vercel.app/',
+    },
+    {
+        title: 'Mi Restaurante',
+        img: ['https://i.postimg.cc/sg9nDPWG/mi-restaurante-captura.webp'],
+        description_es: 'Mi Restaurante es una página para que los restaurantes puedan gestionar su menu QR de forma sencilla',
+        description_en: 'My Restaurant is a page so that restaurants can manage their QR menu in a simple way',
+        deploy: 'https://restaurant-template-six.vercel.app/',
+    },
+    {
         title: 'IP Adress Tracker',
         img: ['https://raw.githubusercontent.com/Gonzalomorales1001/IP-adress-tracker/main/src/design/Captura.PNG'],
         description_es: 'Localizador de IP elaborado con React, Bootstrap y consumiendo la API de Ipify',
         description_en: 'IP locator made with React, Bootstrap and consuming the Ipify API',
         deploy: 'https://iptracker-gm.netlify.app/',
         code: 'https://github.com/Gonzalomorales1001/IP-adress-tracker'
-    },
-    {
-        title: 'NFT Card Preview',
-        img: [
-            'https://raw.githubusercontent.com/Gonzalomorales1001/NFT-preview-card/main/design/Captura.PNG',
-        ],
-        description_es: 'Hecho con HTML y CSS puro, uno de mis primeros retos de FrontEnd Mentor',
-        description_en: 'Made with HTML and pure CSS, one of my first FrontEnd Mentor challenges',
-        deploy: 'https://nftcardpreview-gm.netlify.app/',
-        code: 'https://github.com/Gonzalomorales1001/NFT-preview-card',
-    },
-    {
-        title: 'Tip Calculator App',
-        img: ['https://raw.githubusercontent.com/Gonzalomorales1001/tip-calculator-app/main/design/screenshot.PNG'],
-        description_es: 'Calculadora de propina, mis primeros pasos con JavaScript DOM',
-        description_en: 'Tip calculator, my first steps with JavaScript DOM',
-        deploy: 'https://tipcalculatorapp-gm.netlify.app/',
-        code: 'https://github.com/Gonzalomorales1001/tip-calculator-app'
     },
     {
         title: 'Rolling Code Talks',
@@ -78,14 +81,6 @@ export const allProjects = [
         code: "https://github.com/Gonzalomorales1001/rollingcodetalks-gm"
     },
     {
-        title: 'Matrix To-Do List',
-        img: ["https://i.postimg.cc/rshhNMVS/todolist.png","https://i.postimg.cc/j2kXJccc/todolist-2.png"],
-        description_es: "El clásico To-Do List; muy usado para los primeros aprendizajes con JavaScript, pero esta vez con un estilo Matrix que cambia de colores",
-        description_en: "The classic To-Do List; widely used for first learning with JavaScript, but this time with a Matrix style that changes colors",
-        deploy: "https://matrix-todolist-gm.netlify.app/",
-        code: "https://github.com/Gonzalomorales1001/Matrix-ToDo-List"
-    },
-    {
         title: 'Survey Job',
         img: ["https://i.postimg.cc/qvqPYDWJ/surveyjob.png"],
         description_es: "SurveyJob es una página donde podrás contestar encuestas, crear y ver sus resultados",
@@ -93,14 +88,6 @@ export const allProjects = [
         deploy: "https://surveyjob.netlify.app/",
         code: "https://github.com/Gonzalomorales1001/Surveyjob-frontend"
     },
-    {
-        title: "Dewbie Games",
-        img: ["https://i.postimg.cc/KcQs2rPR/dewbiegames.png","https://i.postimg.cc/0NT17GW8/dewbiegames-2.png","https://i.postimg.cc/rFf6f2nZ/dewbiegames-3.png"],
-        description_es: "Dewbie Games es un proyecto que hicimos en JavaScript Vanilla, el cual recopila juegos para aprender a programar",
-        description_en: "Dewbie Games is a project we made in Vanilla JavaScript, which compiles games to learn to program",
-        deploy: "https://dewbiegames.netlify.app/",
-        code: "https://github.com/Gonzalomorales1001/RollingGames-Crag-Team"
-    }
 ];
 
 

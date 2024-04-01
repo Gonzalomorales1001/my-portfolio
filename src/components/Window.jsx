@@ -75,7 +75,11 @@ const Window = ({ title, projects, closeWindow }) => {
                                                 </main>
                                                 <footer className="project-footer">
                                                     <a href={project.deploy} target='__blank' className="button w-100">{t('Window.deploy')}</a>
-                                                    <a href={project.code} target='__blank' className="button w-100">{t('Window.code')}</a>
+                                                    {project.code
+                                                        &&
+                                                        <a href={project.code} target='__blank' className="button w-100">{t('Window.code')}</a>
+                                                    }
+
                                                 </footer>
                                             </article>
                                         </div>
