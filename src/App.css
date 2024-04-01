@@ -155,8 +155,22 @@ background: linear-gradient(180deg, #FDEDDB 0%, #241E00 100%), linear-gradient(1
   position: relative;
 }
 
+.bg-aqua {
+  background-color: var(--aqua);
+}
+
 .fw-200{
   font-weight: 200;
+}
+
+.scroll-progress {
+  height: 2px;
+  width: 100%;
+  z-index: 9999999;
+  background-color: var(--aqua);
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .aqua-border::before {
